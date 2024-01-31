@@ -1,4 +1,7 @@
 import { RealTimeMessageEventData } from './RealTimeMessageEventData'
 
-export type AllRealTimeEventDatas = RealTimeMessageEventData
-export type RealTimeEventNames = AllRealTimeEventDatas['realTimeEventName']
+export type RealTimeEventDatas = RealTimeMessageEventData
+export type RealTimeEventNames = RealTimeEventDatas['realTimeEventName']
+export type RealTimeEventMap = {
+  [K in RealTimeEventDatas['realTimeEventName']]: Extract<RealTimeEventDatas, { realTimeEventName: K }>
+}
