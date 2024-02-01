@@ -5,6 +5,7 @@ export type PushNotifData = PushNotifCommonData &
     | {
         type: 'ANNOUNCEMENT_CREATED'
         announcementId: number
+        practiceId: number
       }
     | {
         type: 'FORM_ASSIGNED'
