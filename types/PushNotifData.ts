@@ -20,6 +20,10 @@ export type PushNotifData = PushNotifCommonData &
         appointmentId: string
         practiceUrl: string
       }
+    | {
+        type: 'NEW_MESSAGE'
+        practiceUrl: string
+      }
   )
 
 type ExtractType<T> = T extends { type: infer U } ? U : never
