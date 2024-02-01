@@ -1,3 +1,3 @@
 export type RealTimeEventData = {
-  realTimeEventName: string
+  socketEventName: string
 }

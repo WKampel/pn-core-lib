@@ -2,7 +2,7 @@ import { MessageSentBy } from '../MessageSentBy'
 import { RealTimeEventData } from './RealTimeEventData'
 
 export type RealTimeMessageEventData = RealTimeEventData & {
-  realTimeEventName: 'new message'
+  socketEventName: 'new message'
   id: number
   body: string
   createdAt: Date
