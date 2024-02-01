@@ -12,3 +12,6 @@ export type FormFieldValueTypeMap = {
   TITLE: never
   YES_NO: boolean
 }
+
+export const formFieldTypesWithRequired: FormFieldType[] = ['DATE', 'DROPDOWN', 'RADIO', 'TEXT_AREA', 'TEXT_INPUT', 'TIME', 'YES_NO']
+export const formFieldTypesWithOptions: FormFieldType[] = ['DROPDOWN', 'RADIO']
