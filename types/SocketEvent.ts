@@ -1,11 +1,5 @@
+import { InAppNotificationEventData } from './InAppNotificationEventData'
 import { MessageSentBy } from './MessageSentBy'
-
-type NotificationData = {
-  notificationName: 'new message'
-  patientId: string
-  sentBy: MessageSentBy
-  body: string
-}
 
 export type SocketEvent = {
   socketEventName: string
@@ -26,7 +20,7 @@ export type SocketEvent = {
       socketEventName: 'notification'
       title: string
       body: string
-      data: NotificationData
+      data: InAppNotificationEventData
     }
 )
 
