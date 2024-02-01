@@ -12,10 +12,3 @@ export type FormFieldValueTypeMap = {
   TITLE: never
   YES_NO: boolean
 }
-
-export type FormResponseInputType = {
-  formFieldId: string
-  type: FormFieldType
-} & {
-  [K in FormFieldType]: { value: FormFieldValueTypeMap[K] }
-}[FormFieldType]
