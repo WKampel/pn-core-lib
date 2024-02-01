@@ -10,6 +10,16 @@ export type PushNotifData = PushNotifCommonData &
     | {
         type: 'FORM_ASSIGNED'
       }
+    | {
+        type: 'PROMOTION_ACTIVATED'
+        promotionId: number
+        practiceUrl: string
+      }
+    | {
+        type: 'APPOINTMENT_REMINDER'
+        appointmentId: string
+        practiceUrl: string
+      }
   )
 
 type ExtractType<T> = T extends { type: infer U } ? U : never
