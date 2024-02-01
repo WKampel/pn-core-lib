@@ -19,6 +19,8 @@ export type SocketEvent = {
   | {
       socketEventName: 'notification'
       data: InAppNotificationEventData
+      title: string
+      body: string
     }
 )
 
