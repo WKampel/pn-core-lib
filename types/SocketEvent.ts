@@ -18,8 +18,6 @@ export type SocketEvent = {
     }
   | {
       socketEventName: 'notification'
-      title: string
-      body: string
       data: InAppNotificationEventData
     }
 )
