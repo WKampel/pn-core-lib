@@ -3,13 +3,13 @@ export type FormFieldType = 'DATE' | 'DROPDOWN' | 'LONG_TEXT' | 'RADIO' | 'SIGNA
 export type FormFieldValueTypeMap = {
   DATE: Date | null
   DROPDOWN: string
-  LONG_TEXT: string
   RADIO: string[]
   SIGNATURE: string
   TEXT_AREA: string
   TEXT_INPUT: string
   TIME: Date | null
   TITLE: never
+  LONG_TEXT: never
   YES_NO: boolean | null
 }
 
