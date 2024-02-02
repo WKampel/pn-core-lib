@@ -10,7 +10,7 @@ export type FormFieldValueTypeMap = {
   TEXT_INPUT: string
   TIME: Date
   TITLE: never
-  YES_NO: boolean
+  YES_NO: boolean | null
 }
 
 export const formFieldTypesWithRequired: FormFieldType[] = ['DATE', 'DROPDOWN', 'RADIO', 'TEXT_AREA', 'TEXT_INPUT', 'TIME', 'YES_NO']
