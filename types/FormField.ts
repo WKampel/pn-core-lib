@@ -1,4 +1,8 @@
-export type FormFieldType = 'DATE' | 'DROPDOWN' | 'LONG_TEXT' | 'RADIO' | 'SIGNATURE' | 'TEXT_AREA' | 'TEXT_INPUT' | 'TIME' | 'TITLE' | 'YES_NO'
+import { FormFieldType, PatientResponseFormFieldType } from '../../gql/graphql'
+
+export function isValueFormFieldType(type: FormFieldType): type is PatientResponseFormFieldType {
+  return type !== 'LONG_TEXT' && type !== 'TITLE'
+}
 
 export type FormFieldValueTypeMap = {
   DATE: Date | null
