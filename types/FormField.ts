@@ -1,7 +1,7 @@
 export type FormFieldType = 'DATE' | 'DROPDOWN' | 'LONG_TEXT' | 'RADIO' | 'SIGNATURE' | 'TEXT_AREA' | 'TEXT_INPUT' | 'TIME' | 'TITLE' | 'YES_NO'
 export type PatientResponseFormFieldType = 'DATE' | 'DROPDOWN' | 'RADIO' | 'SIGNATURE' | 'TEXT_AREA' | 'TEXT_INPUT' | 'TIME' | 'YES_NO'
 
-export function isValueFormFieldType(type: FormFieldType): type is PatientResponseFormFieldType {
+export function isValueFormFieldType(type: FormFieldType): type is Exclude<FormFieldType, 'LONG_TEXT' | 'TITLE'> {
   return type !== 'LONG_TEXT' && type !== 'TITLE'
 }
 
@@ -13,8 +13,6 @@ export type FormFieldValueTypeMap = {
   TEXT_AREA: string
   TEXT_INPUT: string
   TIME: Date | null
-  TITLE: never
-  LONG_TEXT: never
   YES_NO: boolean | null
 }
 
